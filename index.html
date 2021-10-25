@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="output.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.17/tailwind.min.css" >
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css" >
+    <link rel="stylesheet" href="style.css">
     <title>Js Challenge 1</title>
-    <script src="static/js/script.js"></script>
 </head>
-<body class="  bg-blue-200 h-full flex justify-center mt-40">
-    <div>
-        <div class="bg-pink-300 h-80 shadow-2xl rounded-md overflow-hidden">
-            <img class="bg-blend-multiply" src="https://source.unsplash.com/f2xfTOv0p9Y/550x150">
-            <div class="p-4">
-                <h3 class="text-4xl mb-5" >Js Challege 1: Your Age In Days<h3>
-            </div>
-            <div id="result text-2xl mb-5"></div>
-            <div class="ml-50 text-center">
-
-                <button class="px-4 py-2 bg-blue-500 text-white rounded-md" onclick="ageInDays()">Click me</button>
-                <button class=" mx-8 px-4 py-2 bg-blue-500 text-white rounded-md">Reset</button>
-            </div>
-        </div>
+<body class="page">
+  <main class="container">
+    <h2 class="title">Find your age in days 🤓</h2>
+    <form action="javascript:void()" class="form" id="form">
+      <div class="input-group">
+        <label for="date-of-birth">When were you born?</label>
+        <input required type="date" name="date-of-birth" id="date-of-birth">
+      </div>
+      <div class="form-group btn-group">
+        <button type="submit">Find my age!</button>
+        <button type="reset">Reset</button>
+      </div>
+    </form>
+    <div id="resultdiv" class="hidden result">
+      <h3 class="subtitle">You are <span id="result">__</span> days old</h3>
+      <button id="reset" type="button">Find someone else's age</button>
     </div>
+  </main>
+  <script src="script.js"></script>
 </body>
 </html>
-
-
